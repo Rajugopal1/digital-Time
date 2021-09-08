@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital time
+
+    </title>
+    <style>
+        #id{
+            justify-content: center;
+            align-items: center;
+            background-color:black;
+           color: white;
+           font-size: 100px;
+            width: 50%;
+            height: 300px;
+            margin: 200px;
+            border: 2px solid black;
+            border-radius: 20px;
+            box-shadow: 10px 100px 100px 4px rgb(116, 109, 109);
+        }
+        body{
+            background-color:white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="id">
+            <div id="dt"></div>
+            <div id="d"></div>
+            
+
+        </div>
+       
+       
+
+    </center>
+  
+    <script>
+        setInterval(showtime ,1000);
+        function showtime(){
+        
+
+        let val = new Date();
+        let date=val.getDate();
+        let month=val.getMonth();
+        let year=val.getFullYear();
+        let day=val.getDay();
+        
+        let time= val.getTime();
+        let hour=val.getHours();
+        let minute=val.getMinutes();
+        let sec=val.getSeconds();
+
+        switch(day){
+            case 0:
+            day = "Sunday";
+            break;
+        
+            case 1:
+            day = "Monday";
+            break;
+        
+            case 2:
+            day ="Tuesday";
+            break;
+        
+            case 3:
+            day = "Wednesday";
+            break;
+        
+            case 4:
+            day = "Thrusday";
+            break;
+        
+            case 5:
+            day = "Friday";
+            break;
+        
+            case 6:
+            day = "Saturday";
+            break;
+          }
+           
+  
+        let curtime=hour + ":" 
+        + minute + ":" + sec 
+        let curday=day+" / "+date + "- "+ month + "-" +year
+        
+        document.getElementById("dt").innerHTML=curtime;
+        document.getElementById("d").innerHTML=curday;
+           }
+           
+
+           
+
+    </script>
+    
+</body>
+</html>
